@@ -1,3 +1,12 @@
+from rest_framework import viewsets
+from rest_framework import authentication
+from .serializers import (
+    CustomTextSerializer,
+    DoD_Asset1Serializer,
+    DoD_Asset2Serializer,
+    DoD_Asset3Serializer,
+    HomePageSerializer,
+)
 from rest_framework.authentication import SessionAuthentication, TokenAuthentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.permissions import IsAdminUser
@@ -11,7 +20,7 @@ from home.api.v1.serializers import (
     HomePageSerializer,
     UserSerializer,
 )
-from home.models import CustomText, HomePage
+from home.models import CustomText, DoD_Asset1, DoD_Asset2, DoD_Asset3, HomePage
 
 
 class SignupViewSet(ModelViewSet):
@@ -49,3 +58,30 @@ class HomePageViewSet(ModelViewSet):
     authentication_classes = (SessionAuthentication, TokenAuthentication)
     permission_classes = [IsAdminUser]
     http_method_names = ["get", "put", "patch"]
+
+
+class DoD_Asset3ViewSet(viewsets.ModelViewSet):
+    serializer_class = DoD_Asset3Serializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = DoD_Asset3.objects.all()
+
+
+class DoD_Asset2ViewSet(viewsets.ModelViewSet):
+    serializer_class = DoD_Asset2Serializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = DoD_Asset2.objects.all()
+
+
+class DoD_Asset1ViewSet(viewsets.ModelViewSet):
+    serializer_class = DoD_Asset1Serializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = DoD_Asset1.objects.all()
