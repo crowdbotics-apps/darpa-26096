@@ -6,35 +6,59 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0002_load_initial_data'),
+        ("home", "0002_load_initial_data"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='DoD_Asset1',
+            name="DoD_Asset1",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=256)),
-                ('description', models.BigIntegerField()),
-                ('location', models.BigIntegerField()),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=256)),
+                ("description", models.BigIntegerField()),
+                ("location", models.BigIntegerField()),
             ],
         ),
         migrations.CreateModel(
-            name='DoD_Asset2',
+            name="DoD_Asset2",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.BigIntegerField()),
-                ('description', models.BigIntegerField()),
-                ('location', models.BigIntegerField()),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.BigIntegerField()),
+                ("description", models.BigIntegerField()),
+                ("location", models.BigIntegerField()),
             ],
         ),
         migrations.CreateModel(
-            name='DoD_Asset3',
+            name="DoD_Asset3",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.BigIntegerField()),
-                ('description', models.BigIntegerField()),
-                ('location', models.BigIntegerField()),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.BigIntegerField()),
+                ("description", models.BigIntegerField()),
+                ("location", models.BigIntegerField()),
             ],
         ),
     ]
