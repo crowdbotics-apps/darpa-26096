@@ -63,8 +63,9 @@ class DoD_Asset2(models.Model):
 
 class DoD_Asset1(models.Model):
     "Generated Model"
-    name = models.CharField(
-        max_length=256,
-    )
-    description = models.BigIntegerField()
     location = models.BigIntegerField()
+    pilot = models.CharField(
+        max_length=256,
+        null=True,
+        blank=True,
+    )

@@ -7,24 +7,39 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Foreign_Asset1',
+            name="Foreign_Asset1",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('description', models.BigIntegerField()),
-                ('location', models.BigIntegerField()),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("description", models.BigIntegerField()),
+                ("location", models.BigIntegerField()),
             ],
         ),
         migrations.CreateModel(
-            name='Foreign_Asset2',
+            name="Foreign_Asset2",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('description', models.BigIntegerField()),
-                ('location', models.BigIntegerField()),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("description", models.BigIntegerField()),
+                ("location", models.BigIntegerField()),
             ],
         ),
     ]
